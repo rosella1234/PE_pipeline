@@ -4,11 +4,13 @@ Matlab-based image processing pipeline in support of diagnosis of Pectus Excavat
 ## Dependencies:
 The software code has been developed in MATLAB® 2020a, running in Windows 10.
 ## Data structure:
+```
 Anonymized - patient_id
   |- BTFE_BH
       |- dcm files
       |- results
         |- indexes.xlsx
+ ```
                
  ## How to run:
 `main` function contains calls for all submodules explained in detail below. 
