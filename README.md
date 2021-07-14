@@ -11,9 +11,7 @@ Anonymized - patient_id
         |- indexes.xlsx
                
  **How to run:** \
-
 `main` function contains calls for all submodules explained in detail below. 
-
 Current framework is organized in four interconnected modules summarized below: Pre-processing, Depression quantification, Inner chest contour segmentation and Thoracic indexes computation. 
 ![image](https://user-images.githubusercontent.com/58302565/125595264-331b32ee-87ce-4d07-9d46-761cdf072b14.png)
 
