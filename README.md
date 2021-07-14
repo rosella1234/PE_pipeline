@@ -1,8 +1,20 @@
 ## PE_pipeline
 Matlab-based image processing pipeline in support of diagnosis of Pectus Excavatum (PE) patients. Our pipeline allows automatic computation of existing clinical indexes used in PE diagnosis and tratment with unprecedented advantages of avoiding user bias and saving time. Moreover, extraction of new volumetric marker reflecting pathologic severity is proposed.
 
-Current framework is organized in four interconnected modules summarized below: Pre-processing, Depression quantification, Inner chest contour segmentation and Thoracic indexes computation. The software code has been developed in MATLAB® 2020a, running in Windows 10. `main` function contains calls for all submodules explained in detail below. 
+**Dependencies:**
+The software code has been developed in MATLAB® 2020a, running in Windows 10.
+**Data structure:**
+Anonymized - patient_id
+  |- BTFE_BH
+      |- dcm files
+      |- results
+        |- indexes.xlsx
+               
+ **How to run:**
 
+`main` function contains calls for all submodules explained in detail below. 
+
+Current framework is organized in four interconnected modules summarized below: Pre-processing, Depression quantification, Inner chest contour segmentation and Thoracic indexes computation. 
 ![image](https://user-images.githubusercontent.com/58302565/125595264-331b32ee-87ce-4d07-9d46-761cdf072b14.png)
 
 **Pre-processing:** \
@@ -22,4 +34,6 @@ Firstly, the algorithm isolates the inner chest portion by exploiting histogram 
 This module aims at computing PE indices used by physicians to classify the severity of patients’ malformation. As mentioned above, among multiple thoracic markers, we focused on the severity (Haller index and Correction index) and deformity (Asymmetry index and Flatness index) ones. The algorithm only works on the first slice of images processed in the previous module. Indeed, it corresponds to the slice selected by the user or to the first following one where inner chest contour can be detected (`contcorr_interpolation`). 
 Once inner distances and thoracic indices are computed (`inner_index`), the framework saves their results along with the new pathological marker (depression factor) obtained in Depression quantification module in an Excel file, located in the same folder as patient’s images. Each quantified distance in following computations has been multiplied by ‘pixel spacing’ attribute in order to have measures in mm.
 
+**Contributors:** \
+Simona Martini, Rosella Trò 
 
