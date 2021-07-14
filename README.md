@@ -29,8 +29,7 @@ In order to improve low contrast inherent to CMR images, firstly we perform a co
 ## Depression quantification:
 This module has the goal to quantify the depression, based on a volumetric study. Indeed, rather than evaluating the depression on a single slice, as traditional radiological indices commonly adopted in clinical practice do, we propose to analyze multiple slices in order to measure the depression volume. The idea is to identify the two maximum and the minimum points of the outer chest contour for each slice considered (`outer_contour` function) and thus define an elliptic curve between the two maximum points in order to correct the depression and simulate the normal chest, in absence of PE malformation (`depression_eval` function). The difference between the chest image before and after image correction gives the amount of the depression.
 In `main` function the new volumetric index, named Depression Factor is computed as follows:\
-<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
-Depression factor=$\frac{depression volume}{correct chest volume} * 100$
+<img src="https://render.githubusercontent.com/render/math?math=Depression factor=$\frac{depression volume}{correct chest volume} * 100$">
 
 ## Inner chest contour segmentation:
 This module aims at detecting the inner contour of the chest, fundamental for PE index calculation.
