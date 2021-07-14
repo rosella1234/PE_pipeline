@@ -15,7 +15,10 @@ Anonymized - patient_id
  ## How to run:
 `main` function contains calls for all submodules explained in detail below. 
 Current framework is organized in four interconnected modules summarized below: Pre-processing, Depression quantification, Inner chest contour segmentation and Thoracic indexes computation. 
+\
+<p align="center">
 ![image](https://user-images.githubusercontent.com/58302565/125595264-331b32ee-87ce-4d07-9d46-761cdf072b14.png)
+</p>
 
 ## Pre-processing:
 As a preliminary step for subsequent analyses, a range of slices of interest has to be selected, including the slice of maximal sternal depression, on which measurements for PE indices calculation are usually performed in clinic. This step has been implemented through a Graphical User Interface for selecting range of slices, slice for PE indexes computation, as well as patient’s gender. This is realized through `visualize_select` function
