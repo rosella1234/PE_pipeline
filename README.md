@@ -13,8 +13,12 @@ Anonymized - patient_id
  ```
                
  ## How to run:
-`main` function contains calls for all submodules explained in detail below. 
-Current framework is organized in four interconnected modules summarized below: Pre-processing, Depression quantification, Inner chest contour segmentation and Thoracic indexes computation. 
+- Organize your data as indicated above
+- Download (or ```git clone```) this repository.
+- Go to the repository folder: ```cd pediatric-genova```
+- Copy the file ```parameters_template.sh``` and rename it as ```parameters.sh```.
+- `main` function contains calls for all submodules explained in detail below. 
+- Current framework is organized in four interconnected modules summarized below: Pre-processing, Depression quantification, Inner chest contour segmentation and Thoracic indexes computation. 
 <p align="center">
   <img src ="https://user-images.githubusercontent.com/58302565/125595264-331b32ee-87ce-4d07-9d46-761cdf072b14.png" />
 </p>
