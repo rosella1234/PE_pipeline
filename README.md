@@ -1,9 +1,9 @@
-## PE_pipeline
+# PE_pipeline
 Matlab-based image processing pipeline in support of diagnosis of Pectus Excavatum (PE) patients. Our pipeline allows automatic computation of existing clinical indexes used in PE diagnosis and tratment with unprecedented advantages of avoiding user bias and saving time. Moreover, extraction of new volumetric marker reflecting pathologic severity is proposed.
 
-# Dependencies:
+## Dependencies:
 The software code has been developed in MATLAB® 2020a, running in Windows 10.
-# Data structure:
+## Data structure:
 Anonymized - patient_id
   |- BTFE_BH
       |- dcm files
