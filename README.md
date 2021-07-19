@@ -28,9 +28,9 @@ In order to improve low contrast inherent to CMR images, firstly we perform a co
 
 ## Depression quantification:
 This module has the goal to quantify the depression, based on a volumetric study. Indeed, rather than evaluating the depression on a single slice, as traditional radiological indices commonly adopted in clinical practice do, we propose to analyze multiple slices in order to measure the depression volume. The idea is to identify the two maximum and the minimum points of the outer chest contour for each slice considered (`outer_contour` function) and thus define an elliptic curve between the two maximum points in order to correct the depression and simulate the normal chest, in absence of PE malformation (`depression_eval` function). The difference between the chest image before and after image correction gives the amount of the depression.
-In `main` function the new volumetric index, named Depression Factor is computed as follows:
+In `main` function the new volumetric index, named Volumetric Correction Index (VCI), is computed as follows:
 <p align="center">
-<img src="https://render.githubusercontent.com/render/math?math=depression factor=\Large\frac{depression volume}{correct chest volume}*100">
+<img src="https://render.githubusercontent.com/render/math?math=Volumetric Correction Index=\Large\frac{depression volume}{correct chest volume}*100">
 </p>
 ## Inner chest contour segmentation:
 This module aims at detecting the inner contour of the chest, fundamental for PE index calculation.
@@ -38,7 +38,7 @@ Firstly, the algorithm isolates the inner chest portion by exploiting histogram 
 
 ## Thoracic indexes computation:
 This module aims at computing PE indices used by physicians to classify the severity of patients’ malformation. As mentioned above, among multiple thoracic markers, we focused on the severity (Haller index and Correction index) and deformity (Asymmetry index and Flatness index) ones. The algorithm only works on the first slice of images processed in the previous module. Indeed, it corresponds to the slice selected by the user or to the first following one where inner chest contour can be detected (`innercontour_preparation`). 
-Once inner distances and thoracic indices are computed (`inner_index`), the framework saves their results along with the new pathological marker (depression factor) obtained in Depression quantification module in an Excel file, located in the same folder as patient’s images. Each quantified distance in following computations has been multiplied by ‘pixel spacing’ attribute in order to have measures in mm.
+Once inner distances and thoracic indices are computed (`inner_index`), the framework saves their results along with the new pathological marker (VCI) obtained in Depression quantification module in an Excel file, located in the same folder as patient’s images. Each quantified distance in following computations has been multiplied by ‘pixel spacing’ attribute in order to have measures in mm.
 
 ## Contributors:
 Simona Martini, Rosella Trò 
