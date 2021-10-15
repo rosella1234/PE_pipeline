@@ -41,5 +41,5 @@ This module aims at computing PE indices used by physicians to classify the seve
 Once inner distances and thoracic indices are computed (`inner_index`), the framework saves their results along with the new pathological marker (VCI) obtained in Depression quantification module in an Excel file, located in the same folder as patient’s images. Each quantified distance in following computations has been multiplied by ‘pixel spacing’ attribute in order to have measures in mm.
 
 ## Contributors:
-Simona Martini, Rosella Trò 
+Rosella Trò, Simona Martini
 
