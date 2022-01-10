@@ -32,6 +32,7 @@ In `main` function the new volumetric index, named Volumetric Correction Index (
 <p align="center">
 <img src="https://render.githubusercontent.com/render/math?math=Volumetric Correction Index=\Large\frac{depression volume}{correct chest volume}*100">
 </p>
+
 ## Inner chest contour segmentation:
 This module aims at detecting the inner contour of the chest, fundamental for PE index calculation.
 Firstly, the algorithm isolates the inner chest portion by exploiting histogram partitioning and lung segmentation (`hist_threshold` and `lung_segmentation`) as well as similarity between the inner and outer wall contour (`innercontour_seg` and `contour_interpolation`). Then, it excludes the vertebral body by thresholding method (`innermask_seg`). A user intervention is required here for selecting the starting slice for correction (`innermask_select`). Outcome of this step are provided by `inner_analysis` function, which gives binary mask of inner chest portion and lung segmentation after correction. 
